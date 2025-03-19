@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-Website</title>
+    <!-- <script src="https://unpkg.com/@tailwindcss/browser@4"></script> -->
+  </head>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <script src="tailwind.config.js"></script>
+</head>
+<body class="overflow-x-hidden dark:bg-darkTheme dark:text-white">
+
+    <div class="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%] dark:hidden">
+        <!-- <img src="img/bg3.jpeg" alt="" class="w-full"> -->
+    </div>
+    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ">
+        <img src="img/logo1.jpg" alt="logo" class="w-36 cursor-pointer mr-14 dark:hidden">
+
+        <img src="img/logo2.png" alt="logo" class="w-36 cursor-pointer mr-14 hidden dark:block">
+
+        <ul class=" hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 dark:border dark:border-white/50 dark:bg-transparent">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#project">Projects</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+        <div class="flex items-center gap-4">
+            <button onclick="toggleTheme()">
+                <!-- <img src="img/moon.png" alt="" class="w-6"> -->
+                <i class="fa-regular fa-moon dark:hidden"></i>
+                <i class="fa-solid fa-sun hidden dark:block"></i>
+            </button>
+        <a href="#contact" class=" px-10 py-3 border rounded-full border-gray-500  flex items-center gap-4">Contact<i class="fa-solid fa-arrow-up-right-from-square "></i></a>
+
+        <button class="block md:hidden ml-3" onclick="openMenu()">
+            <i class="fa-solid fa-bars dark:hidden"></i>
+            <i class="fa-solid fa-bars hidden dark:block"></i>
+        </button>
+        </div>
+        <!-- mobile menu -->
+         <ul id="sideMenu" class="md:hidden flex-col  gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50  transition duration-500 dark:bg-darkHover dark:text-white">
+            <div class="absolute right-6 top-6" onclick="closeMenu()">
+                <i class="fa-solid fa-xmark cursor-pointer"></i> 
+            </div>
+            <li><a href="home" onclick="closeMenu()">Home</a></li>
+            <li><a href="about" onclick="closeMenu()">About Us</a></li>
+            <li><a href="services" onclick="closeMenu()">Services</a></li>
+            <li><a href="project" onclick="closeMenu()">Projects</a></li>
+            <li><a href="contact" onclick="closeMenu()">Contact Me</a></li>
+
+         </ul>
+        
+    </nav>
+<!-- header -->
+ <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+    <img src="img/pic1.jpg" alt="" class="rounded-full w-28 mt-40">
+    <h3 class="flex items-end gap-2 text-xl md:text-2xl mb-3">Hi! I'm Tasbiha Sheikh <img src="img/hand.jpeg" alt="" class="w-8"></h3>
+    <h1 class="text-3xl sm:text-6xl lg:text-[55px] font-bold">Web Developer based in Pakistan</h1>
+    <p class="max-w-2xl mx-auto">I am a professional web developer skilled in creating responsive, user-friendly websites tailored to your needs.</p>
+    <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+        <a href="#contact" class=" font-bold px-10 py-3 border rounded-full  border-gray-500  flex items-center gap-2 bg-white hover:shadow-black cursor-pointer hover:bg-[lightHover] hover:-translate-y-1 duration-500 text-wrap flex items-center gap-2 dark:text-black">Contact Me <i class="fa-solid fa-arrow-up-right-from-square w-4"></i></a>
+        <a href="img/Resume.pdf" download  class=" font-bold px-10 py-3 border rounded-full border-gray-500  flex items-center gap-2 bg-white hover:shadow-black cursor-pointer hover:bg-[lightHover] hover:-translate-y-1 duration-500 dark:text-black">My resume<i class="fa-solid fa-download"></i></a>
+    </div>
+ </div>
+
+ <!-- about me -->
+  <div id="about" class="w-full px-[12%] py-10 scroll-mt-20">
+    <h4 class="text-center mb-2 text-lg">Introduction</h4>
+    <h2 class="text-center text-5xl font-semibold">About Me</h2>
+    <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-10">
+        <div class="max-w-max mx-auto relative">
+            <img src="img/pic1.jpg" alt="" class="w-64 sm:w-80 rounded-3xl max-w-none hover:shadow-black cursor-pointer hover:-translate-y-1 duration-500">
+        </div>
+        <div class="flex-1">
+            <p class="mb-10 max-w-2xl">I am experienced developer with over a decade of professional expertise in the field.</p>
+            <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+                <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[lightHover] hover:-translate-y-1 duration-500 hover:shadow-black dark:hover:bg-darkHover dark:hover:shadow-white">
+                    <img src="img/code.jpeg" alt="" class="w-7 mt-3">
+                    <h3 class="my-4 font-bold text-gray-700 dark:text-white">Languages</h3>
+                    <p class="text-gray-600 text-sm  dark:text-white/80">HTML, CSS, JavaScript, React Js, Next Js</p>
+                </li>
+                <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[lightHover] hover:-translate-y-1 duration-500 hover:shadow-black dark:hover:bg-darkHover dark:hover:shadow-white">
+                    <img src="img/edu.jpg" alt="" class="w-7 mt-3">
+                    <h3 class="my-4 font-bold text-gray-700  dark:text-white">Education</h3>
+                    <p class="text-gray-600 text-sm  dark:text-white/80">BS in Computer Science</p>
+                </li>
+                <li class="border-[0.5px] border-gray-400 rounded-xl p-6 cursor-pointer hover:bg-[lightHover] hover:-translate-y-1 duration-500 hover:shadow-black dark:hover:bg-darkHover dark:hover:shadow-white">
+                    <img src="img/project.jpg" alt="" class="w-7 mt-3">
+                    <h3 class="my-4 font-bold text-gray-700  dark:text-white">Projects</h3>
+                    <p class="text-gray-600 text-sm  dark:text-white/80">Build more than 5 Projects</p>
+                </li>
+            </ul>
+            <h4 class="my-6 text-gray-700 font-bold  dark:text-white">Tools I Use</h4>
+            <ul class="flex items-center gap-3 sm:gap-5">
+                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
+                <img src="img/vscode.png" alt="" class="w-5 sm:w-7">
+                </li>
+                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
+                    <img src="img/wordpress.jpeg" alt="" class="w-5 sm:w-7">
+                    </li>
+                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
+                        <img src="img/mongo.png" alt="" class="w-5 sm:w-7">
+                        </li>
+                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
+                            <img src="img/chatgpt.jpeg" alt="" class="w-5 sm:w-7">
+                            </li>
+                <li class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:-translate-y-1 duration-500 ">
+                                <img src="img/git.png" alt="" class="w-5 sm:w-7">
+                                </li>
+            </ul>
+        </div>
+    </div>
+  </div>
+  <!-- services -->
+   <div id="services" class="w-full px-[12%] py-10 scroll-mt-20">
+    <h4 class="text-center mb-2 text-lg">What I Offer</h4>
+    <h2 class="text-center text-5xl  font-semibold">My Services</h2>
+    <p class="text-center max-w-2xl mx-auto mt-5 mb-12 ">I design and develop fully responsive, high-performance websites tailored to your needs. Whether it's a portfolio, business website, or an e-commerce store, I ensure a sleek and modern design with smooth functionality.</p>
+
+    <div class="grid grid-cols-auto gap-6 my-10">
+        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-[lightHover] hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+            <img src="img/web.jpeg" alt="" class="w-10">
+            <h3 class="text-lg my-4 text-gray-500 font-bold  dark:text-white">Web Design</h3>
+            <p class="text-sm text-gray-600 leading-5  dark:text-white/80">Web design involves creating visually appealing, user-friendly, and responsive websites</p>
+            <a href="" class="flex items-center gap-2 text-sm mt-7">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-[lightHover] hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+            <img src="img/mobile.jpeg" alt="" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 font-bold  dark:text-white">Mobile App</h3>
+            <p class="text-sm text-gray-600 leading-5  dark:text-white/80">Mobile app is a software application designed for smartphones and tablets, offering seamless functionality and user-friendly experiences.</p>
+            <a href="" class="flex items-center gap-2 text-sm mt-7">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-[lightHover] hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+            <img src="img/UX.jpeg" alt="" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 font-bold  dark:text-white">UI/UX Design</h3>
+            <p class="text-sm text-gray-600 leading-5  dark:text-white/80">UI/UX design focuses on creating visually appealing, user-friendly, and intuitive digital experiences.</p>
+            <a href="" class="flex items-center gap-2 text-sm mt-7">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="border border-gray-400 rounded-lg px-8 py-12 hover:shadow-black cursor-pointer hover:bg-[lightHover] hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">
+            <img src="img/design.jpeg" alt="" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 font-bold  dark:text-white">Graphics Design</h3>
+            <p class="text-sm text-gray-600 leading-5 dark:text-white/80">Graphic design is the art of visually communicating ideas through typography, imagery, and layout to create engaging and impactful designs.</p>
+            <a href="" class="flex items-center gap-2 text-sm mt-7">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+   </div>   
+   <!-- my work -->
+   <div id="project" class="w-full px-[12%] py-10 scroll-mt-20">
+   <h4 class="text-center mb-2 text-lg">My Portfolio</h4>
+   <h2 class="text-center text-5xl  font-semibold">My Latest Work</h2>
+   <p class="text-center max-w-2xl mx-auto mt-5 mb-12">Welcome to my Web development Portfolio! Explore a collection of projects showcasting my expertise in development.</p>
+   <div class="grid grid-cols-auto my-10 gap-5">
+    <div class="border border-gray-400 rounded-lg px-8 py-12  cursor-pointer  hover:-translate-y-1 duration-500">
+        <img src="img/birthday.png" alt="" class="w-full ">
+        <h3 class="text-lg my-4 text-gray-700 font-bold  dark:text-white">Birthday Card</h3>
+        <p class="text-sm text-gray-600 leading-5  dark:text-white/80">"Celebrate their special day with a heartfelt birthday card filled with love and joy. A perfect way to send warm wishes and make them smile!".</p>
+        <a href="https://tasbiha-sheikh.github.io/Website/birthday/" class=" font-bold w-max flex items-center justify-center gap-2 text-sm border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-10 hover:shadow-black cursor-pointer hover:bg-[lightHover] hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">Github</a>
+    </div>
+    <div class="border border-gray-400 rounded-lg px-8 py-12 cursor-pointer  hover:-translate-y-1 duration-500">
+        <img src="img/portfolio.png" alt="" class="w-full ">
+        <h3 class="text-lg my-4 text-gray-700 font-bold  dark:text-white">Personal Portfolio</h3>
+        <p class="text-sm text-gray-600 leading-5  dark:text-white/80">"Showcase your skills, achievements, and creativity with a stunning personal portfolio. A professional way to make a lasting impression!".</p>
+        <a href="https://tasbiha-sheikh.github.io/Portfolio-Website/updated/" class=" font-bold w-max flex items-center justify-center gap-2 text-sm border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-10 hover:shadow-black cursor-pointer hover:bg-[lightHover] hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">Github</a> 
+    </div>
+    <div class="border border-gray-400 rounded-lg px-8 py-12  cursor-pointer  hover:-translate-y-1 duration-500">
+        <img src="img/foodies.png" alt="" class="w-full ">
+        <h3 class="text-lg my-4 text-gray-700 font-bold  dark:text-white">Recipes Website</h3>
+        <p class="text-sm text-gray-600 leading-5  dark:text-white/80">"Discover delicious recipes for every occasion, from quick meals to gourmet delights. Easy-to-follow instructions and mouthwatering flavors await!".</p>
+        <a href="https://tasbiha-sheikh.github.io/Recipes/website/" class=" font-bold w-max flex items-center justify-center gap-2 text-sm border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-10 hover:shadow-black cursor-pointer hover:bg-[lightHover] hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">Github</a> 
+    </div>
+    <div class="border border-gray-400 rounded-lg px-8 py-12  cursor-pointer  hover:-translate-y-1 duration-500">
+        <img src="img/code player.png" alt="" class="w-full ">
+        <h3 class="text-lg my-4 text-gray-700 font-bold  dark:text-white">Code Player</h3>
+        <p class="text-sm text-gray-600 leading-5  dark:text-white/80">"Code Player is an interactive platform to write, test, and refine code in real-time. Perfect for learning, experimenting, and improving coding skills!".</p>
+        <a href="https://tasbiha-sheikh.github.io/code-player/Project/" class=" font-bold w-max flex items-center justify-center gap-2 text-sm border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-10 hover:shadow-black cursor-pointer hover:bg-[lightHover] hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">Github</a> 
+    </div>
+   
+    <div class="border border-gray-400 rounded-lg px-8 py-12  cursor-pointer  hover:-translate-y-1 duration-500">
+        <img src="img/eye track.png" alt="" class="w-full ">
+        <h3 class="text-lg my-4 text-gray-700 font-bold  dark:text-white">Eye Tracking</h3>
+        <p class="text-sm text-gray-600 leading-5  dark:text-white/80">"An eye-tracking project involves developing a system to capture and analyze eye movements to study user behavior, attention, or cognitive processes!".</p>
+        <a href="https://tasbiha-sheikh.github.io/Website1/eye/" class=" font-bold w-max flex items-center justify-center gap-2 text-sm border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto my-10 hover:shadow-black cursor-pointer hover:bg-[lightHover] hover:-translate-y-1 duration-500 dark:hover:bg-darkHover dark:hover:shadow-white">Github</a> 
+    </div>
+    <!-- <a href="#" class=" font-bold w-max my-20 flex items-center justify-center gap-2 text-sm border-[0.5px] border-gray-700 rounded-full py-3 px-10 mx-auto  hover:shadow-black cursor-pointer hover:bg-[lightHover] hover:-translate-y-1 duration-500">Show More<i class="fa-solid fa-arrow-right dark:hover:bg-darkHover dark:hover:shadow-white"></i></a> -->
+   </div>
+
+   <!-- contact us -->
+   <div id="contact" class="w-full px-[12%] py-10 scroll-mt-20">
+    <h4 class="text-center mb-2 text-lg">Connect With Me</h4>
+    <h2 class="text-center text-5xl  font-semibold">Get in Touch</h2>
+    <p class="text-center max-w-2xl mx-auto mt-5 mb-12">Get in touch with us for any inquiries, support, or feedback. We're here to help. Please use the form below!</p>
+    <form method="POST" action="https://api.web3forms.com/submit" class="max-w-2xl mx-auto">
+        <input type="hidden" name="access_key" value="43834050-f4cd-4bd8-adb6-c021d1aaaed5">
+        <div class="grid grid-cols-auto gap-6 mt-10 mb-8">
+            <input type="text" placeholder="Enter your name" class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90" required name="name">
+            <input type="email" placeholder="Enter your email" class="flex-1 p-3 outline-none border-[0.5px] border-gray-400 rounded-md bg-white dark:bg-darkHover/30 dark:border-white/90" required name="email">
+        </div>
+        <textarea rows="6" placeholder="Enter your Message" class="w-full p-4 outline-none border-[0.5px] border-gray-400 rounded-md bg-white mb-6 dark:bg-darkHover/30 dark:border-white/90" required name="Message"></textarea>
+        <button class=" font-bold w-max flex items-center justify-center gap-2 text-md border-[0.5px] border-gray-700 rounded-full py-3 px-8 mx-auto  hover:shadow-black cursor-pointer hover:bg-[lightHover] hover:-translate-y-1 duration-500">Submit Now<i class="fa-solid fa-arrow-right"></i></button>
+    </form>
+    </div>
+
+    <!-- footer -->
+     <div class="mt-20">
+        <div class="text-center">
+            <img src="img/logo1.jpg" alt="" class="w-36 mx-auto mb-2">
+            <div class="w-max flex items-center gap-2 mx-auto">
+                <i class="fa-solid fa-envelope"></i> tasbihairfan730@gmail.com
+            </div>
+        </div>
+        <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] my-12 p-6">
+            <p>0 2025 tasbiha-sheikh.All right reserved.</p>
+            <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+                <li><i class="fa-brands fa-github"></i><a href="https://github.com/">Github</a></li>
+                <li><i class="fa-brands fa-square-instagram"></i><a href="https://www.instagram.com/">Instagram</a></li>
+                <li><i class="fa-brands fa-facebook"></i><a href="https://www.facebook.com/">Facebook</a></li>
+                <li><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/">Linkedin</a></li>
+            </ul>
+
+        </div>
+     </div>
+
+     <script>
+        const navBar = document.querySelector("nav");
+        const navLinks = document.querySelector("nav ul");
+
+        function openMenu() {
+    document.getElementById("sideMenu").style.right = "0";
+}
+
+function closeMenu() {
+    document.getElementById("sideMenu").style.right = "-100%";
+}
+window.addEventListener('scroll',()=>{
+    if(scrollY>50){
+        navBar.classList.add('bg-white', 'bg-opacity-50','backdrop-blur-lg','shadow-sm','dark:bg-darkTheme','dark:shadow-white/20');
+        navLinks.classList.remove('bg-white','shadow-sm','bg-opacity-50','dark:border','dark:border-white/70','dark:bg-transparent');
+    }
+    else{
+        navBar.classList.remove('bg-white', 'bg-opacity-50','backdrop-blur-lg','shadow-sm','dark:bg-darkTheme','dark:shadow-white/20');
+        navLinks.classList.add('bg-white','shadow-sm','bg-opacity-50','dark:border','dark:border-white/70','dark:bg-transparent');
+
+    }
+})
+
+if (
+  localStorage.theme === "dark" ||
+  (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)
+) {
+  document.documentElement.classList.add("dark");
+} else {
+  document.documentElement.classList.remove("dark");
+}
+
+function toggleTheme() {
+  document.documentElement.classList.toggle("dark");
+
+  if (document.documentElement.classList.contains("dark")) {
+    localStorage.theme = "dark";
+  } else {
+    localStorage.theme = "light";
+  }
+}
+
+     </script>
+
+</body>
+</html>
